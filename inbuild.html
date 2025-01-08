@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //String Object Methods
+        var str="Good Morning,This is a beautiful day.";
+        document.write("Length is : "+str.length+"<br>");
+        document.write("Index 21 : "+str.charAt(21)+"<br>");
+        document.write(String.fromCharCode(65,66,67)+"<br>");
+        document.write("First : "+str.indexOf('i')+"<br>");
+        document.write("Last : "+str.lastIndexOf('i')+"<br>");
+        document.write(str.includes('is')+"<br>");
+        document.write(str.match('ab')+"<br>");
+        document.write(str.search('is')+"<br>");
+        document.write(str.substr(5,12)+"<br>");
+        document.write(str.substring(5,12)+"<br>");
+        document.write(str.slice(5,12)+"<br>");
+        document.write(str.concat(" Hello World")+"<br>");
+        document.write(str.replace("Mor","Eve")+"<br>");
+        console.log(str.split(" "));
+        document.write(str.toLowerCase()+"<br>");
+        document.write(str.toUpperCase()+"<br>");
+
+
+        //Take a screen from user,Also char from user,find the first accrance of char in string,last accrance of char in string also find string in beetwen.
+
+        //var s=prompt("Please enter your name: ");
+        //var a=s.length-1;
+        //document.write("First : "+s[0]+"<br>");
+        //document.write("Last : "+s[a]+"<br>");
+        //document.write("between : "+s.substring(1,a)+"<br>");
+
+        //------Math Object--------//
+        document.write(Math.PI)
+        document.write(Math.abs(-4.2)+"<br>");
+        document.write(Math.floor(5.9)+"<br>");
+        document.write(Math.ceil(5.1)+"<br>");
+        document.write(Math.round(4.5)+"<br>");
+        document.write(Math.min(2,18,7,1,6)+"<br>");
+        document.write(Math.max(5,15,30,23)+"<br>");
+        document.write(Math.pow(5,2)+"<br>");
+        document.write(Math.sqrt(144)+"<br>");
+        document.write(Math.random()+"<br>");
+        document.write(Math.log(10)+"<br>");
+        document.write(Math.log10(100)+"<br>");
+        document.write(Math.log2(100)+"<br>");
+        document.write(Math.sin(90)+"<br>");
+
+        //Date Object
+        var today=new Date();
+        console.log("today is : "+today);
+        document.write("today is : "+today+"<br>");
+        console.log(today.getDate());
+        console.log(today.getMonth());
+        console.log(today.getFullYear());
+        console.log(today.getDay());
+        console.log(today.getHours());
+        console.log(today.getMinutes());
+        console.log(today.getSeconds());
+        console.log(today.getMilliseconds());
+        console.log(today.getTime());
+
+        var ut=new Date();
+        ut.setDate(14);
+        ut.setMonth(0);
+        ut.setFullYear(2025);
+        console.log("uttrayan is on : "+ut);
+
+        //write a js two ask date of birth to user and find no. of days left for there up coming birthday.
+        var today1=new Data();
+        var bday=new Data('09-10-2005');
+        var diff=Math.ceil((bday.getTime()-today1.getTime())/oneday);
+        document.write(diff+" days left for year today")
+    </script>
+</body>
+</html>
