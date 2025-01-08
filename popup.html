@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert("Hello World");
+
+        //var b=confirm("Are you sure");
+        //if(b==true)
+        //{
+        //    console.log("Ok");
+        //}
+        //else
+        //{
+        //    console.log("Cancel");
+        //}
+
+        //var p=prompt("Enter your name");
+        //if(p!=null)
+        //{
+        //    console.log("Your name is : "+p);
+        //}
+
+
+        //write a js two ask the user about to two number.also asks the opration to perform(+,-,*,/).display ans of given opararion in alert box.user switch case.
+
+
+        var p1=parseInt(prompt("Enter the no 1 : "));
+        var p2=parseInt(prompt("Enter the no 2 : "));
+        var p3=prompt("Enter opartion(+,-,*,/) : ");
+        switch(p3)
+        {
+            case '+':
+                var diff=p1+p2;
+                alert("sum is : "+diff);
+                break;
+            case '-':
+                var diff=p1-p2;
+                alert("sub is : "+diff);
+                break;
+            case '*':
+                var diff=p1*p2;
+                alert("multi is : "+diff);
+                break;
+            case '/':
+                var diff=p1/p2;
+                alert("divition is : "+diff);
+                break;
+            default:
+                break;
+        }
+
+    </script>
+</body>
+</html>
