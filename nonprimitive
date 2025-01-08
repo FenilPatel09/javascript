@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var marks=[60,50,40];
+        //var marks=new Array();
+        //marks[0]=60
+        //marks[1]=50
+        //marks[2]=40
+        var marks=new Array(60,50,40);
+
+        for(var i=0;i<marks.length;i++)
+        {
+            document.write(marks[i]+" ");
+        }
+        document.write(typeof(marks));
+
+        console.log(marks.toString());
+        console.log(marks.at(2));        
+        console.log(marks.join("*"));
+        console.log(marks.push(80));
+        console.log(marks.pop());
+        
+        var marks2=new Array(24,54,74);
+        console.log(marks.concat(marks2));
+
+        var fruits=new Array("watermelon","blueberry","grapes","mango");
+        console.log(fruits.sort());
+        console.log(marks2.sort(function(a,b) {return b-a}));
+
+        
+        //var s1={rollno:1,sname:"Fenil",marks:{FSD:22,FCSP:25}};
+
+        var s1=new Object();
+        s1.rollno=10;
+        s1.sname="Fenil";
+        s1.marks=new Object();
+        s1.marks.FSD=22;
+        s1.marks.FCSP=22;
+
+        document.write("s1 has properties : <br> "+s1.rollno+"<br>"+s1.sname+"<br>"+s1.marks.FSD+"<br>");
+        
+        //methods or function
+        var demo=function()
+        {
+            document.write("Hello World")
+        };
+        demo();
+        document.write("<br>")
+        s1.display=function(r,n)
+        {
+            s1.rollno=r;
+            s1.sname=n;
+            document.write("change value : "+s1.rollno+" "+s1.sname+" ");
+        };
+        s1.display(34,"Prince");
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
