@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <script>
+        //1. var vs let vs const
+        //2. Template literal
+        //var
+        var x1=10;
+        if(x1>0){
+            x1=20;
+            console.log(`Inside if ${x1}`);
+        }
+        console.log(`Outside if ${x1}`);
+
+        //let
+        let x2=10;
+        if(x2>0){
+            let x2=20;
+            console.log(`Inside if ${x2}`);
+        }
+        console.log(`Outside if ${x2}`);
+
+        //const.
+        const x3=10;
+        if(x3>0){
+            const x3=20;
+            console.log(`Inside if ${x3}`);
+        }
+        console.log(`Outside if ${x3}`);
+
+
+        //3_. Fat arrow function
+        const display=()=>{console.log('Hello world');};
+        display();
+        const sum=(a,b)=>{console.log(`sum is ${a+b}`);};
+        sum(20,30)
+
+
+        //4. Rest & spread
+        //spread
+        let a1=[10,20,30];
+        let a2=[...a1,40,50,60];
+        console.log(`the array is ${a2}`);
+
+        //rest
+        const add1=(...args)=>
+        {
+            var sum=0;
+            for(i=0;i<args.length;i++)
+            {
+                sum=sum+args[i];
+            }
+            return sum;
+        };
+        console.log(`Sum of  is ${add1(10,20,30,40,50)}`);
+
+
+        //5_. Default parameters
+        const display1=(city,uname="Fenil")=>
+        {
+            console.log(`Hello ${uname} from ${city}`);
+        }
+        display1();
+        display1("Ahm","prince");
+
+
+        //6. Map
+        let s=new Map();
+        s.set('sname','Fenil');
+        s.set('roll no',1);
+        s.set('marks',99);
+        console.log(`name of student is ${s.get('sname')}`);
+        console.log(`size of map is ${s.get(s.size)}`);
+        console.log(`marks of student is ${s.get(s.has('marks'))}`);
+        s.delete('marks');
+        console.log(`...${s.has("marks")}`);
+        s.clear();
+        console.log(s);
+
+
+        //7. for..of 8. for..in
+        var s1=['Fenil','Prince','Naimish','Nikhar'];
+        for(var s2 of s1)
+        {
+            document.write(s2," ");
+        }
+
+        var mark=[70,80,90];
+        var [p,q,r]=mark;
+        console.log(p);
+        console.log(q);
+        console.log(r);
+
+
+        //10. Class & constructor
+        class Student{
+            constructor(s,r){
+                this.name=s;
+                this.rollno=r;
+            }
+            cdisplay=()=>{
+                console.log(`name is ${this.name} and rollno is ${this.rollno}`);
+            }
+        }
+        let s3=new Student('Fenil',1);
+        s3.cdisplay();
+
+        //11. object destructuring
+        var all={lastname:"Patel",designation:"Ahm"};
+        var{lastname:l,designation:d}=all;
+        console.log(l);
+        console.log(d);
+    </script>
+  </body>
+</html>
